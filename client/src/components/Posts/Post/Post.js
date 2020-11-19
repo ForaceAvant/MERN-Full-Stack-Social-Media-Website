@@ -7,7 +7,7 @@ import moment from 'moment';
 import useStyles from './styles';
 import { useDispatch } from 'react-redux';
 
-import { deletePost, likePost } from '../../../actions/posts'
+import { deletePost, likePost } from '../../../actions/posts';
 
 
 const Post = ({ post, setCurrentId }) => {
@@ -27,11 +27,11 @@ const Post = ({ post, setCurrentId }) => {
                 </Button>
             </div>
             <div className={classes.details}>
-                <Typography variant="body2" color="textSecondary">{post.tags.map((tag) => `#${tag}`)}</Typography>
+                <Typography variant="body2" color="textSecondary">{post.tags.map((tag) => `#${tag} `)}</Typography>
             </div>
             <Typography className={classes.title} variant="h5" gutterBottom> {post.title} </Typography>
             <CardContent>
-                <Typography className={classes.title} variant="h5" gutterBottom> {post.message} </Typography>
+                <Typography className={classes.title} variant="body2" color="textSecondary" component="p"> {post.message} </Typography>
             </CardContent>
             <CardActions className={classes.cardActions}>
                 <Button size="small" color="primary" onClick={() => {dispatch(likePost(post._id))}} >
