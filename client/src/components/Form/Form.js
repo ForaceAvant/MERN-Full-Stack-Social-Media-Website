@@ -41,7 +41,7 @@ const Form = ({ currentId, setCurrentId }) => {
             title: '', 
             message: '',
             tags: '',
-            selectedFile: ''
+            selectedFile: '',
         });
     };
 
